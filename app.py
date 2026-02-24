@@ -28,7 +28,7 @@ cpu_series = st.selectbox("CPU Series", [
     "M1", "M2", "Other"
 ])
 
-cpu_generation = st.number_input("CPU Generation (e.g., 11, 12, 13)", min_value=0, max_value=20, value=12)
+cpu_generation = st.number_input("CPU Generation (e.g., 11, 12, 13)", min_value=0, max_value=14, value=12)
 
 gpu_type = st.selectbox("GPU Type", ["Integrated", "Dedicated"])
 
@@ -84,3 +84,4 @@ if st.button("Predict Price"):
     prediction = np.expm1(prediction_log)[0]
 
     st.success(f"💰 Estimated Price: ₹ {int(prediction):,}")
+
